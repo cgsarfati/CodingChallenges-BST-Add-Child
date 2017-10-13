@@ -95,6 +95,11 @@ class Node(object):
         # need to traverse to BST's roots via recursion and comparing data
         # with new_data. once node has opening slot, then append new_data node.
 
+        # PROGRESSION
+            # compare new data w/ current data (new > current --> R; else, L)
+            # BASE: if either .right or .left is None (meaning a root), append node
+            # else, recurse (to keep traversing)
+
 
 if __name__ == "__main__":
     import doctest
