@@ -100,6 +100,28 @@ class Node(object):
             # BASE: if either .right or .left is None (meaning a root), append node
             # else, recurse (to keep traversing)
 
+        # traverse right
+        if new_data >= self.data:
+
+            # BASE: if root, append
+            if self.right is None:
+                self.right = Node(new_data)
+
+            # if not root, recurse
+            else:
+                self.right.insert(new_data)
+
+        # traverse left
+        else:
+
+            # BASE: if root, append
+            if self.left is None:
+                self.left = Node(new_data)
+
+            # if not root, recurse
+            else:
+                self.left.insert(new_data)
+
 
 if __name__ == "__main__":
     import doctest
