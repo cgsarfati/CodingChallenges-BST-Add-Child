@@ -89,8 +89,15 @@ class Node(object):
     def insert(self, new_data):
         """Insert new node with `new_data` to BST tree rooted here."""
 
+        # considerations: new_data at left-most, right-most and middle;
+        # always at root though (problem not considering middle of BST)
+
+        # need to traverse to BST's roots via recursion and comparing data
+        # with new_data. once node has opening slot, then append new_data node.
+
+
 if __name__ == "__main__":
     import doctest
-    
+
     if doctest.testmod().failed == 0:
         print "\n*** ALL TESTS PASSED. NODES ADDED SUCCESSFULLY!\n"
